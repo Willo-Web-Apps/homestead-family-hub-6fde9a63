@@ -7,52 +7,65 @@ import Base from '../layouts/Base.astro';
 >
 
   <!-- ============================================================
-       HERO — Immersive, atmospheric, editorial
+       HERO — Immersive, atmospheric, editorial storytelling
+       Full-bleed, golden-hour gradient with grain texture
        ============================================================ -->
-  <section class="relative min-h-[92vh] flex items-center overflow-hidden noise-overlay hero-bg">
-    <!-- Decorative botanical element top-right -->
-    <div class="absolute top-0 right-0 w-80 h-80 opacity-10 pointer-events-none" aria-hidden="true">
-      <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-        <circle cx="280" cy="40" r="180" fill="oklch(0.36 0.080 140)"/>
-      </svg>
-    </div>
-    <!-- Decorative botanical element bottom-left -->
-    <div class="absolute bottom-0 left-0 w-64 h-64 opacity-8 pointer-events-none" aria-hidden="true">
-      <svg viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-        <circle cx="-20" cy="280" r="160" fill="oklch(0.60 0.120 55)"/>
-      </svg>
-    </div>
+  <section class="relative min-h-[95vh] flex items-center overflow-hidden hero-bg noise-overlay">
 
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36">
+    <!-- Drifting botanical orb — upper right, very subtle -->
+    <div
+      class="absolute top-[-8%] right-[-5%] w-[520px] h-[520px] rounded-full pointer-events-none animate-drift"
+      style="background: radial-gradient(circle at 40% 40%, oklch(0.54 0.085 140 / 0.13) 0%, transparent 65%); filter: blur(40px);"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Warm amber glow — lower left -->
+    <div
+      class="absolute bottom-[-10%] left-[-8%] w-[480px] h-[480px] rounded-full pointer-events-none animate-pulse-soft"
+      style="background: radial-gradient(circle at 55% 55%, oklch(0.60 0.110 55 / 0.16) 0%, transparent 65%); filter: blur(50px);"
+      aria-hidden="true"
+    ></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-40 w-full">
       <div class="max-w-4xl">
-        <!-- Eyebrow -->
-        <p class="animate-fade-in text-sm font-semibold uppercase tracking-[0.2em] text-accent-500 mb-6 font-body">
-          Family Homesteading — Made Joyful &amp; Practical
-        </p>
 
-        <!-- Main headline -->
-        <h1 class="animate-slide-up font-display font-semibold leading-[1.06] tracking-tight text-surface-900" style="font-size: clamp(3rem, 8vw, 6.5rem);">
+        <!-- Eyebrow label with botanical rule -->
+        <div class="animate-fade-in flex items-center gap-4 mb-8">
+          <span class="block w-8 h-px bg-accent-500 opacity-70"></span>
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-accent-500 font-body">
+            Family Homesteading — Made Joyful &amp; Practical
+          </p>
+        </div>
+
+        <!-- Main headline — dramatic serif, generous scale -->
+        <h1 class="animate-slide-up font-display leading-[1.03] tracking-tight text-surface-900" style="font-size: clamp(3.2rem, 9vw, 7.5rem); font-weight: 600;">
           Grow Food,<br>
-          <em class="font-normal italic text-brand-500">Build Skills,</em><br>
+          <em class="font-normal italic" style="color: oklch(0.36 0.080 140);">Build Skills,</em><br>
           Raise Capable Kids
         </h1>
 
         <!-- Subheadline -->
-        <p class="animate-slide-up delay-200 mt-8 text-lg md:text-xl text-surface-800/75 max-w-2xl leading-relaxed font-body">
-          Hearthstead guides families through every step of the homesteading journey — from first garden beds to full pantries — together.
+        <p class="animate-slide-up delay-200 mt-8 text-xl md:text-2xl text-surface-800 max-w-2xl leading-relaxed font-body" style="font-weight: 400; color: oklch(0.32 0.032 76);">
+          Hearthstead guides families through every step of the homesteading journey — from first garden beds to full pantries — <em>together.</em>
         </p>
 
         <!-- CTAs -->
-        <div class="animate-slide-up delay-300 mt-10 flex flex-col sm:flex-row gap-4 items-start">
+        <div class="animate-slide-up delay-300 mt-12 flex flex-col sm:flex-row gap-4 items-start">
           <a
             href="#cta"
-            class="inline-block px-8 py-4 bg-brand-500 text-surface-50 font-semibold rounded-full hover:bg-brand-600 transition-colors duration-200 text-base font-body"
+            class="inline-block px-9 py-4 font-semibold rounded-full transition-all duration-200 font-body text-base"
+            style="background-color: oklch(0.36 0.080 140); color: oklch(0.97 0.012 85); letter-spacing: 0.01em;"
+            onmouseover="this.style.backgroundColor='oklch(0.28 0.068 140)'"
+            onmouseout="this.style.backgroundColor='oklch(0.36 0.080 140)'"
           >
             Start My Family's Journey
           </a>
           <a
             href="#story"
-            class="inline-flex items-center gap-2 px-8 py-4 border border-brand-500/40 text-brand-500 font-semibold rounded-full hover:border-brand-500 hover:bg-brand-50 transition-colors duration-200 text-base font-body"
+            class="inline-flex items-center gap-2.5 px-9 py-4 font-semibold rounded-full border transition-all duration-200 font-body text-base"
+            style="border-color: oklch(0.36 0.080 140 / 0.35); color: oklch(0.36 0.080 140);"
+            onmouseover="this.style.borderColor='oklch(0.36 0.080 140)'; this.style.backgroundColor='oklch(0.36 0.080 140 / 0.06)'"
+            onmouseout="this.style.borderColor='oklch(0.36 0.080 140 / 0.35)'; this.style.backgroundColor='transparent'"
           >
             Read Our Story
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
@@ -61,43 +74,63 @@ import Base from '../layouts/Base.astro';
           </a>
         </div>
 
-        <!-- Social proof micro-line -->
-        <p class="animate-fade-in delay-500 mt-8 text-sm text-surface-800/50 font-body">
-          Join <strong class="text-surface-800/75 font-semibold">4,200+ families</strong> already growing together &mdash; no acres of land required.
-        </p>
+        <!-- Social proof -->
+        <div class="animate-fade-in delay-500 mt-10 flex items-center gap-4">
+          <!-- Avatar stack (decorative) -->
+          <div class="flex -space-x-2.5" aria-hidden="true">
+            <div class="w-9 h-9 rounded-full border-2 flex items-center justify-center text-xs font-semibold" style="border-color: oklch(0.97 0.012 85); background: oklch(0.84 0.048 140); color: oklch(0.36 0.080 140);">M</div>
+            <div class="w-9 h-9 rounded-full border-2 flex items-center justify-center text-xs font-semibold" style="border-color: oklch(0.97 0.012 85); background: oklch(0.84 0.078 62); color: oklch(0.50 0.110 52);">J</div>
+            <div class="w-9 h-9 rounded-full border-2 flex items-center justify-center text-xs font-semibold" style="border-color: oklch(0.97 0.012 85); background: oklch(0.93 0.025 140); color: oklch(0.36 0.080 140);">R</div>
+            <div class="w-9 h-9 rounded-full border-2 flex items-center justify-center text-xs font-semibold" style="border-color: oklch(0.97 0.012 85); background: oklch(0.91 0.020 82); color: oklch(0.28 0.030 75);">+</div>
+          </div>
+          <p class="text-sm font-body" style="color: oklch(0.40 0.028 76);">
+            Join <strong style="color: oklch(0.28 0.030 75); font-weight: 600;">4,200+ families</strong> already growing together — no acres of land required.
+          </p>
+        </div>
       </div>
     </div>
 
-    <!-- Bottom fade into next section -->
-    <div class="absolute bottom-0 left-0 right-0 h-24 pointer-events-none" style="background: linear-gradient(to bottom, transparent, oklch(0.96 0.015 85));"></div>
+    <!-- Bottom fade into story section -->
+    <div class="absolute bottom-0 left-0 right-0 h-28 pointer-events-none z-10" style="background: linear-gradient(to bottom, transparent, oklch(0.96 0.015 85));"></div>
+
+    <!-- Decorative serif letterform — bottom right, very large, partially cropped -->
+    <div
+      class="absolute bottom-[-4rem] right-[-2rem] select-none pointer-events-none opacity-[0.045] font-display leading-none"
+      style="font-size: 28rem; font-weight: 700; color: oklch(0.36 0.080 140); z-index: 1; font-family: var(--font-display);"
+      aria-hidden="true"
+    >H</div>
   </section>
 
   <!-- ============================================================
-       WAVE DIVIDER → Story section
+       ORGANIC WAVE DIVIDER 1 — into story
        ============================================================ -->
-  <div class="overflow-hidden leading-[0] bg-surface-100" aria-hidden="true">
-    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:80px; display:block; margin-top:-2px;">
-      <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,30 1440,40 L1440,0 L0,0 Z" fill="oklch(0.96 0.015 85)"/>
+  <div class="overflow-hidden leading-[0]" style="background: oklch(0.96 0.015 85);" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:90px; display:block; margin-top:-2px;">
+      <path d="M0,45 C200,85 400,15 620,50 C800,78 1000,10 1200,42 C1320,60 1400,30 1440,45 L1440,0 L0,0 Z" fill="oklch(0.96 0.015 85)"/>
     </svg>
   </div>
 
   <!-- ============================================================
        ORIGIN STORY — Why Hearthstead Exists
+       Asymmetric editorial two-column layout
        ============================================================ -->
-  <section id="story" class="bg-surface-100 py-24 md:py-36">
+  <section id="story" class="section-py" style="background: oklch(0.96 0.015 85);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-16 lg:gap-24 items-center">
 
-        <!-- Text side -->
-        <div class="animate-slide-up">
-          <!-- Section label -->
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-accent-500 mb-5 font-body">Our Story</p>
+        <!-- Text column -->
+        <div class="animate-slide-left">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="block w-6 h-px" style="background: oklch(0.60 0.120 55);"></span>
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] font-body" style="color: oklch(0.60 0.120 55);">Our Story</p>
+          </div>
 
-          <h2 class="font-display font-semibold text-surface-900 leading-tight mb-8" style="font-size: clamp(2.2rem, 5vw, 3.8rem);">
-            Modern families are hungry for something real.
+          <h2 class="font-display font-semibold text-surface-900 leading-tight mb-8" style="font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1.05;">
+            Modern families are hungry<br>
+            <em class="font-normal italic" style="color: oklch(0.36 0.080 140);">for something real.</em>
           </h2>
 
-          <div class="space-y-5 text-surface-800/80 leading-relaxed font-body text-lg">
+          <div class="space-y-5 leading-relaxed font-body" style="font-size: 1.1rem; color: oklch(0.32 0.030 76); line-height: 1.8;">
             <p>
               We didn't set out to homestead. We set out to eat a tomato grown by our own hands — and to let our children experience the quiet pride of harvesting something they'd planted from seed.
             </p>
@@ -115,30 +148,34 @@ import Base from '../layouts/Base.astro';
           </blockquote>
         </div>
 
-        <!-- Visual side — decorative composition -->
-        <div class="relative flex items-center justify-center">
-          <!-- Large decorative background number -->
-          <span class="absolute font-display font-bold text-brand-100 select-none pointer-events-none leading-none" style="font-size: 22rem; opacity: 0.4; top: 50%; left: 50%; transform: translate(-50%, -50%);" aria-hidden="true">H</span>
+        <!-- Visual composition column — typographic sculpture -->
+        <div class="relative flex items-center justify-center animate-slide-right">
+          <!-- Large background "H" letterform — decorative magazine device -->
+          <span
+            class="absolute select-none pointer-events-none font-display leading-none"
+            style="font-size: 20rem; font-weight: 700; color: oklch(0.84 0.048 140); opacity: 0.35; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-display);"
+            aria-hidden="true"
+          >H</span>
 
           <div class="relative z-10 grid grid-cols-2 gap-4 w-full max-w-md">
-            <!-- Stat card 1 -->
-            <div class="bg-surface-50 rounded-2xl p-6 shadow-sm border border-surface-200/60 animate-slide-up delay-100">
-              <p class="font-display text-5xl font-bold text-brand-500 leading-none mb-2">4,200+</p>
-              <p class="text-sm text-surface-800/70 font-body leading-snug">Families growing together</p>
+            <!-- Stat 1 — families -->
+            <div class="rounded-2xl p-6 shadow-sm border animate-slide-up delay-100" style="background: oklch(0.985 0.008 85); border-color: oklch(0.84 0.022 80 / 0.5);">
+              <p class="font-display font-bold leading-none mb-2" style="font-size: 3.2rem; color: oklch(0.36 0.080 140);">4,200+</p>
+              <p class="font-body leading-snug" style="font-size: 0.82rem; color: oklch(0.40 0.028 76);">Families growing together right now</p>
             </div>
-            <!-- Stat card 2 -->
-            <div class="bg-accent-500 rounded-2xl p-6 shadow-sm animate-slide-up delay-200">
-              <p class="font-display text-5xl font-bold text-surface-50 leading-none mb-2">3</p>
-              <p class="text-sm text-surface-50/85 font-body leading-snug">Square feet to start a family garden</p>
+            <!-- Stat 2 — accent block -->
+            <div class="rounded-2xl p-6 shadow-sm animate-slide-up delay-200" style="background: oklch(0.60 0.120 55);">
+              <p class="font-display font-bold leading-none mb-2" style="font-size: 3.2rem; color: oklch(0.985 0.008 85);">3 sq ft</p>
+              <p class="font-body leading-snug" style="font-size: 0.82rem; color: oklch(0.985 0.008 85 / 0.82);">All the space you need to start your first family garden</p>
             </div>
-            <!-- Stat card 3 (wide) -->
-            <div class="col-span-2 bg-brand-500 rounded-2xl p-6 shadow-sm animate-slide-up delay-300">
-              <p class="font-display text-4xl font-bold text-surface-50 leading-none mb-2">Every season</p>
-              <p class="text-sm text-surface-50/80 font-body leading-snug">New skills, new harvests, new memories — guided step by step for the whole family</p>
+            <!-- Stat 3 — wide green block -->
+            <div class="col-span-2 rounded-2xl p-6 shadow-sm animate-slide-up delay-300" style="background: oklch(0.36 0.080 140);">
+              <p class="font-display font-semibold leading-none mb-2" style="font-size: 1.8rem; color: oklch(0.985 0.008 85);">Every season, new roots.</p>
+              <p class="font-body leading-snug" style="font-size: 0.85rem; color: oklch(0.985 0.008 85 / 0.78);">Step-by-step seasonal guides that grow with your family — from first sprouts to full pantry shelves.</p>
             </div>
-            <!-- Tagline card -->
-            <div class="col-span-2 bg-surface-200/70 rounded-2xl p-5 animate-slide-up delay-400 border border-surface-200">
-              <p class="font-display text-lg italic text-surface-900/70 text-center">
+            <!-- Tagline badge -->
+            <div class="col-span-2 rounded-2xl p-5 border text-center animate-slide-up delay-400" style="background: oklch(0.91 0.020 82 / 0.6); border-color: oklch(0.84 0.022 80 / 0.4);">
+              <p class="font-display text-lg italic" style="color: oklch(0.36 0.080 140 / 0.80);">
                 "Where families put down roots."
               </p>
             </div>
@@ -150,101 +187,125 @@ import Base from '../layouts/Base.astro';
   </section>
 
   <!-- ============================================================
-       WAVE DIVIDER → How It Works
+       ORGANIC WAVE DIVIDER 2 — into How It Works
        ============================================================ -->
-  <div class="overflow-hidden leading-[0] bg-surface-50" aria-hidden="true">
-    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:80px; display:block;">
-      <path d="M0,0 C360,70 720,10 1080,50 C1260,70 1380,20 1440,40 L1440,80 L0,80 Z" fill="oklch(0.91 0.020 82)"/>
+  <div class="overflow-hidden leading-[0]" style="background: oklch(0.985 0.008 85);" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:90px; display:block;">
+      <path d="M0,0 C300,80 600,5 900,55 C1080,85 1260,15 1440,50 L1440,90 L0,90 Z" fill="oklch(0.91 0.020 82)"/>
     </svg>
   </div>
 
   <!-- ============================================================
-       HOW IT WORKS — 3 steps
+       HOW IT WORKS — Three-season journey
        ============================================================ -->
-  <section id="how-it-works" class="bg-surface-200/50 py-24 md:py-36">
+  <section id="how-it-works" class="section-py" style="background: oklch(0.91 0.020 82);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
+      <!-- Section header -->
       <div class="text-center max-w-2xl mx-auto mb-20 animate-slide-up">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-accent-500 mb-4 font-body">Your Journey</p>
-        <h2 class="font-display font-semibold text-surface-900 leading-tight" style="font-size: clamp(2rem, 4.5vw, 3.5rem);">
-          Three seasons. One family. A life you'll love.
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <span class="block w-6 h-px" style="background: oklch(0.60 0.120 55);"></span>
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] font-body" style="color: oklch(0.60 0.120 55);">Your Journey</p>
+          <span class="block w-6 h-px" style="background: oklch(0.60 0.120 55);"></span>
+        </div>
+        <h2 class="font-display font-semibold text-surface-900 leading-tight" style="font-size: clamp(2.2rem, 5vw, 3.8rem);">
+          Three seasons.<br>
+          <em class="font-normal italic" style="color: oklch(0.36 0.080 140);">One family. A life you'll love.</em>
         </h2>
-        <p class="mt-5 text-lg text-surface-800/70 font-body leading-relaxed">
-          You don't need experience — just a willingness to start. Hearthstead meets you where you are and grows with you.
+        <p class="mt-5 font-body leading-relaxed" style="font-size: 1.1rem; color: oklch(0.38 0.028 76);">
+          You don't need experience — just the willingness to start. Hearthstead meets you where you are and grows with you.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      <!-- Three steps -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
 
-        <!-- Step 1 -->
-        <div class="relative bg-surface-50 rounded-3xl p-8 lg:p-10 shadow-sm border border-surface-200/60 overflow-hidden animate-slide-up delay-100 group hover:shadow-md transition-shadow duration-300">
-          <!-- Decorative numeral -->
-          <span class="absolute top-4 right-6 font-display font-bold text-brand-100 select-none pointer-events-none leading-none" style="font-size: 8rem; opacity: 0.5;" aria-hidden="true">1</span>
+        <!-- Step 1 — Start Your Garden -->
+        <div class="relative rounded-3xl p-8 lg:p-10 shadow-sm border overflow-hidden animate-slide-up delay-100 group" style="background: oklch(0.985 0.008 85); border-color: oklch(0.84 0.022 80 / 0.55); transition: box-shadow 0.25s ease;">
+          <!-- Large step numeral -->
+          <span
+            class="absolute top-3 right-5 font-display font-bold select-none pointer-events-none leading-none"
+            style="font-size: 8rem; color: oklch(0.84 0.048 140); opacity: 0.45;"
+            aria-hidden="true"
+          >1</span>
+
           <!-- Icon -->
-          <div class="relative z-10 w-12 h-12 bg-brand-100 rounded-2xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1M4.22 4.22l.707.707m12.728 12.728.707.707M1 12h2m18 0h2M4.22 19.78l.707-.707M18.95 5.05l.707-.707M12 7a5 5 0 100 10A5 5 0 0012 7z"/>
+          <div class="relative z-10 w-12 h-12 rounded-2xl flex items-center justify-center mb-6" style="background: oklch(0.93 0.025 140);">
+            <svg class="w-6 h-6" style="color: oklch(0.36 0.080 140);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
+              <!-- Seedling / sprout icon -->
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 22V12m0 0C12 7 7 4 3 6c0 4 3 7 9 6zm0 0c0-5 5-8 9-6 0 4-3 7-9 6z"/>
             </svg>
           </div>
-          <h3 class="relative z-10 font-display text-2xl font-semibold text-surface-900 mb-3 leading-snug">
+
+          <h3 class="relative z-10 font-display font-semibold text-surface-900 mb-3 leading-snug" style="font-size: 1.6rem;">
             Start Your Garden
           </h3>
-          <p class="relative z-10 text-surface-800/70 font-body leading-relaxed">
+          <p class="relative z-10 font-body leading-relaxed" style="font-size: 0.97rem; color: oklch(0.38 0.028 76);">
             Begin with just a few containers or a raised bed. Our family-first guides walk you through selecting seeds, building soil, and getting kids excited to dig in — no matter your outdoor space.
           </p>
           <div class="relative z-10 mt-6">
-            <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500 font-body group-hover:gap-2.5 transition-all duration-200">
+            <a href="#cta" class="inline-flex items-center gap-1.5 text-sm font-semibold font-body group-hover:gap-3 transition-all duration-200" style="color: oklch(0.36 0.080 140);">
               First Garden Guide
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
           </div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="relative bg-brand-500 rounded-3xl p-8 lg:p-10 shadow-sm overflow-hidden animate-slide-up delay-200 group hover:shadow-md transition-shadow duration-300">
-          <!-- Decorative numeral -->
-          <span class="absolute top-4 right-6 font-display font-bold select-none pointer-events-none leading-none" style="font-size: 8rem; opacity: 0.12; color: oklch(0.96 0.015 85);" aria-hidden="true">2</span>
-          <!-- Icon -->
-          <div class="relative z-10 w-12 h-12 bg-surface-50/20 rounded-2xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-surface-50" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+        <!-- Step 2 — Build Your Skills (accent/inverted card) -->
+        <div class="relative rounded-3xl p-8 lg:p-10 shadow-sm overflow-hidden animate-slide-up delay-200 group" style="background: oklch(0.36 0.080 140); transition: box-shadow 0.25s ease;">
+          <span
+            class="absolute top-3 right-5 font-display font-bold select-none pointer-events-none leading-none"
+            style="font-size: 8rem; color: oklch(0.985 0.008 85); opacity: 0.09;"
+            aria-hidden="true"
+          >2</span>
+
+          <div class="relative z-10 w-12 h-12 rounded-2xl flex items-center justify-center mb-6" style="background: oklch(0.985 0.008 85 / 0.18);">
+            <svg class="w-6 h-6" style="color: oklch(0.97 0.012 85);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
+              <!-- Book/skill icon -->
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
             </svg>
           </div>
-          <h3 class="relative z-10 font-display text-2xl font-semibold text-surface-50 mb-3 leading-snug">
+
+          <h3 class="relative z-10 font-display font-semibold mb-3 leading-snug" style="font-size: 1.6rem; color: oklch(0.985 0.008 85);">
             Build Your Skills
           </h3>
-          <p class="relative z-10 text-surface-50/80 font-body leading-relaxed">
-            From composting and seed-saving to bread baking and chicken-keeping — learn practical homestead skills as a family. Every lesson is designed to teach parents and children side by side.
+          <p class="relative z-10 font-body leading-relaxed" style="font-size: 0.97rem; color: oklch(0.97 0.012 85 / 0.80);">
+            From composting and seed-saving to bread baking and chicken-keeping — learn practical homestead skills as a family. Every lesson teaches parents and children side by side.
           </p>
           <div class="relative z-10 mt-6">
-            <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-surface-50 font-body group-hover:gap-2.5 transition-all duration-200">
+            <a href="#cta" class="inline-flex items-center gap-1.5 text-sm font-semibold font-body group-hover:gap-3 transition-all duration-200" style="color: oklch(0.97 0.012 85);">
               Skill Library
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
           </div>
         </div>
 
-        <!-- Step 3 -->
-        <div class="relative bg-surface-50 rounded-3xl p-8 lg:p-10 shadow-sm border border-surface-200/60 overflow-hidden animate-slide-up delay-300 group hover:shadow-md transition-shadow duration-300">
-          <!-- Decorative numeral -->
-          <span class="absolute top-4 right-6 font-display font-bold text-accent-200 select-none pointer-events-none leading-none" style="font-size: 8rem; opacity: 0.6;" aria-hidden="true">3</span>
-          <!-- Icon -->
-          <div class="relative z-10 w-12 h-12 bg-accent-100 rounded-2xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+        <!-- Step 3 — Stock Your Pantry -->
+        <div class="relative rounded-3xl p-8 lg:p-10 shadow-sm border overflow-hidden animate-slide-up delay-300 group" style="background: oklch(0.985 0.008 85); border-color: oklch(0.84 0.022 80 / 0.55); transition: box-shadow 0.25s ease;">
+          <span
+            class="absolute top-3 right-5 font-display font-bold select-none pointer-events-none leading-none"
+            style="font-size: 8rem; color: oklch(0.84 0.078 62); opacity: 0.50;"
+            aria-hidden="true"
+          >3</span>
+
+          <div class="relative z-10 w-12 h-12 rounded-2xl flex items-center justify-center mb-6" style="background: oklch(0.93 0.040 65);">
+            <svg class="w-6 h-6" style="color: oklch(0.50 0.110 52);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
+              <!-- Jar/preserve icon -->
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
             </svg>
           </div>
-          <h3 class="relative z-10 font-display text-2xl font-semibold text-surface-900 mb-3 leading-snug">
+
+          <h3 class="relative z-10 font-display font-semibold text-surface-900 mb-3 leading-snug" style="font-size: 1.6rem;">
             Stock Your Pantry
           </h3>
-          <p class="relative z-10 text-surface-800/70 font-body leading-relaxed">
-            Preserve your harvest with confidence. Canning, fermenting, dehydrating, and root cellaring — straightforward guides that transform abundance into food security all winter long.
+          <p class="relative z-10 font-body leading-relaxed" style="font-size: 0.97rem; color: oklch(0.38 0.028 76);">
+            Preserve your harvest with confidence. Canning, fermenting, dehydrating, and root cellaring — straightforward guides that transform summer's abundance into food security all winter long.
           </p>
           <div class="relative z-10 mt-6">
-            <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-500 font-body group-hover:gap-2.5 transition-all duration-200">
+            <a href="#cta" class="inline-flex items-center gap-1.5 text-sm font-semibold font-body group-hover:gap-3 transition-all duration-200" style="color: oklch(0.60 0.120 55);">
               Preservation Guides
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
           </div>
         </div>
 
@@ -253,119 +314,127 @@ import Base from '../layouts/Base.astro';
   </section>
 
   <!-- ============================================================
-       WAVE DIVIDER → Values
+       ORGANIC WAVE DIVIDER 3 — into Values
        ============================================================ -->
-  <div class="overflow-hidden leading-[0] bg-surface-100" aria-hidden="true">
-    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:80px; display:block;">
-      <path d="M0,20 C480,80 960,0 1440,40 L1440,0 L0,0 Z" fill="oklch(0.91 0.020 82)"/>
+  <div class="overflow-hidden leading-[0]" style="background: oklch(0.96 0.015 85);" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:90px; display:block;">
+      <path d="M0,25 C180,75 400,5 700,45 C900,72 1100,12 1300,38 C1380,52 1420,32 1440,40 L1440,0 L0,0 Z" fill="oklch(0.91 0.020 82)"/>
     </svg>
   </div>
 
   <!-- ============================================================
-       VALUES / COMMUNITY — Who this is for
+       VALUES / WHO IT'S FOR — Built for families
        ============================================================ -->
-  <section id="values" class="bg-surface-100 py-24 md:py-36">
+  <section id="values" class="section-py" style="background: oklch(0.96 0.015 85);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
+      <!-- Section header -->
       <div class="text-center max-w-2xl mx-auto mb-20 animate-slide-up">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-accent-500 mb-4 font-body">Our Principles</p>
-        <h2 class="font-display font-semibold text-surface-900 leading-tight" style="font-size: clamp(2rem, 4.5vw, 3.5rem);">
-          Built for <em class="italic font-normal text-brand-500">families</em> — not just homesteaders.
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <span class="block w-6 h-px" style="background: oklch(0.60 0.120 55);"></span>
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] font-body" style="color: oklch(0.60 0.120 55);">Our Principles</p>
+          <span class="block w-6 h-px" style="background: oklch(0.60 0.120 55);"></span>
+        </div>
+        <h2 class="font-display font-semibold text-surface-900 leading-tight" style="font-size: clamp(2.2rem, 5vw, 3.8rem);">
+          Built for <em class="font-normal italic" style="color: oklch(0.36 0.080 140);">families</em> —<br>
+          not just homesteaders.
         </h2>
-        <p class="mt-5 text-lg text-surface-800/70 font-body leading-relaxed">
+        <p class="mt-5 font-body leading-relaxed" style="font-size: 1.1rem; color: oklch(0.38 0.028 76);">
           Everything at Hearthstead is designed with the whole family unit in mind — parents and children learning the same skills, side by side.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Values grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
 
-        <!-- Value 1 -->
-        <div class="bg-surface-50 rounded-2xl p-7 border border-surface-200/60 animate-slide-up delay-100">
-          <div class="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center mb-5">
-            <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+        <!-- Value 1 — Suburban-Friendly -->
+        <div class="rounded-2xl p-7 border animate-slide-up delay-100" style="background: oklch(0.985 0.008 85); border-color: oklch(0.84 0.022 80 / 0.5);">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background: oklch(0.93 0.025 140);">
+            <svg class="w-5 h-5" style="color: oklch(0.36 0.080 140);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
             </svg>
           </div>
-          <h3 class="font-display text-xl font-semibold text-surface-900 mb-2">Suburban-Friendly</h3>
-          <p class="text-sm text-surface-800/70 font-body leading-relaxed">
+          <h3 class="font-display font-semibold text-surface-900 mb-2" style="font-size: 1.25rem;">Suburban-Friendly</h3>
+          <p class="font-body leading-relaxed" style="font-size: 0.9rem; color: oklch(0.40 0.028 76);">
             You don't need acreage. Our guides work for a 10×10 yard, a patio, or a sunny windowsill.
           </p>
         </div>
 
-        <!-- Value 2 -->
-        <div class="bg-surface-50 rounded-2xl p-7 border border-surface-200/60 animate-slide-up delay-200">
-          <div class="w-10 h-10 bg-accent-100 rounded-xl flex items-center justify-center mb-5">
-            <svg class="w-5 h-5 text-accent-500" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
+        <!-- Value 2 — Family-First -->
+        <div class="rounded-2xl p-7 border animate-slide-up delay-200" style="background: oklch(0.985 0.008 85); border-color: oklch(0.84 0.022 80 / 0.5);">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background: oklch(0.93 0.040 65);">
+            <svg class="w-5 h-5" style="color: oklch(0.50 0.110 52);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
           </div>
-          <h3 class="font-display text-xl font-semibold text-surface-900 mb-2">Family-First Design</h3>
-          <p class="text-sm text-surface-800/70 font-body leading-relaxed">
+          <h3 class="font-display font-semibold text-surface-900 mb-2" style="font-size: 1.25rem;">Family-First Design</h3>
+          <p class="font-body leading-relaxed" style="font-size: 0.9rem; color: oklch(0.40 0.028 76);">
             Every guide is written for parents AND children. Age-appropriate tasks for kids 3 to 16.
           </p>
         </div>
 
-        <!-- Value 3 -->
-        <div class="bg-surface-50 rounded-2xl p-7 border border-surface-200/60 animate-slide-up delay-300">
-          <div class="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center mb-5">
-            <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
+        <!-- Value 3 — Time-Conscious -->
+        <div class="rounded-2xl p-7 border animate-slide-up delay-300" style="background: oklch(0.985 0.008 85); border-color: oklch(0.84 0.022 80 / 0.5);">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background: oklch(0.93 0.025 140);">
+            <svg class="w-5 h-5" style="color: oklch(0.36 0.080 140);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
           </div>
-          <h3 class="font-display text-xl font-semibold text-surface-900 mb-2">Time-Conscious</h3>
-          <p class="text-sm text-surface-800/70 font-body leading-relaxed">
-            We know you're busy. Every lesson is scoped to fit into real family life — weekends, after-school, and slow Saturdays.
+          <h3 class="font-display font-semibold text-surface-900 mb-2" style="font-size: 1.25rem;">Time-Conscious</h3>
+          <p class="font-body leading-relaxed" style="font-size: 0.9rem; color: oklch(0.40 0.028 76);">
+            We know you're busy. Every lesson fits into real family life — weekends, after-school, and slow Saturdays.
           </p>
         </div>
 
-        <!-- Value 4 -->
-        <div class="bg-brand-500 rounded-2xl p-7 animate-slide-up delay-400">
-          <div class="w-10 h-10 bg-surface-50/20 rounded-xl flex items-center justify-center mb-5">
-            <svg class="w-5 h-5 text-surface-50" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
+        <!-- Value 4 — Joyful (inverted) -->
+        <div class="rounded-2xl p-7 animate-slide-up delay-400" style="background: oklch(0.36 0.080 140);">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background: oklch(0.985 0.008 85 / 0.18);">
+            <svg class="w-5 h-5" style="color: oklch(0.97 0.012 85);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
             </svg>
           </div>
-          <h3 class="font-display text-xl font-semibold text-surface-50 mb-2">Joyful, Not Overwhelming</h3>
-          <p class="text-sm text-surface-50/80 font-body leading-relaxed">
+          <h3 class="font-display font-semibold mb-2" style="font-size: 1.25rem; color: oklch(0.985 0.008 85);">Joyful, Not Overwhelming</h3>
+          <p class="font-body leading-relaxed" style="font-size: 0.9rem; color: oklch(0.97 0.012 85 / 0.78);">
             Homesteading should feel like a gift you give your family — not another pressure. We keep it grounded and encouraging.
           </p>
         </div>
-
       </div>
 
-      <!-- Member spotlight / community testimonial -->
-      <div class="mt-16 bg-surface-50 rounded-3xl p-8 md:p-12 border border-surface-200/60 animate-slide-up delay-200">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-accent-500 mb-4 font-body">Family Spotlight</p>
-            <blockquote class="font-display text-2xl md:text-3xl font-medium text-surface-900 leading-snug italic mb-6">
+      <!-- ---- Family Spotlight Testimonial ---- -->
+      <div class="rounded-3xl border overflow-hidden animate-slide-up delay-200" style="background: oklch(0.985 0.008 85); border-color: oklch(0.84 0.022 80 / 0.5);">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-0">
+
+          <!-- Quote side -->
+          <div class="p-8 md:p-12">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="block w-6 h-px" style="background: oklch(0.60 0.120 55);"></span>
+              <p class="text-xs font-semibold uppercase tracking-[0.22em] font-body" style="color: oklch(0.60 0.120 55);">Family Spotlight</p>
+            </div>
+            <blockquote class="font-display font-medium text-surface-900 italic mb-6 leading-snug" style="font-size: clamp(1.6rem, 3.5vw, 2.4rem);">
               "Our kids used to ask 'what's for dinner?' Now they ask 'can we check the tomatoes?' That's everything."
             </blockquote>
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-brand-200 flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                </svg>
-              </div>
+              <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 font-display font-semibold" style="background: oklch(0.84 0.048 140); color: oklch(0.36 0.080 140); font-size: 1.1rem;">B</div>
               <div>
-                <p class="text-sm font-semibold text-surface-900 font-body">The Brennan Family</p>
-                <p class="text-xs text-surface-800/60 font-body">Suburban lot in Ohio — two kids, ages 7 &amp; 11</p>
+                <p class="text-sm font-semibold font-body" style="color: oklch(0.28 0.030 75);">The Brennan Family</p>
+                <p class="text-xs font-body" style="color: oklch(0.50 0.022 76);">Suburban lot in Ohio — two kids, ages 7 &amp; 11</p>
               </div>
             </div>
           </div>
-          <!-- Stat panel -->
-          <div class="grid grid-cols-2 gap-4">
-            <div class="text-center bg-surface-100 rounded-2xl p-6">
-              <p class="font-display text-4xl font-bold text-brand-500 mb-1">87%</p>
-              <p class="text-xs text-surface-800/70 font-body leading-snug">of our families have no prior homesteading experience</p>
+
+          <!-- Stats side — warm strip -->
+          <div class="flex md:flex-col justify-center items-stretch border-t md:border-t-0 md:border-l divide-y md:divide-x-0" style="border-color: oklch(0.84 0.022 80 / 0.45); min-width: 220px;">
+            <div class="flex-1 p-6 text-center flex flex-col justify-center">
+              <p class="font-display font-bold mb-1" style="font-size: 2.8rem; color: oklch(0.36 0.080 140);">87%</p>
+              <p class="font-body leading-snug" style="font-size: 0.8rem; color: oklch(0.42 0.026 76);">had zero homesteading experience when they started</p>
             </div>
-            <div class="text-center bg-accent-500 rounded-2xl p-6">
-              <p class="font-display text-4xl font-bold text-surface-50 mb-1">12</p>
-              <p class="text-xs text-surface-50/80 font-body leading-snug">weeks to your first full harvest, on average</p>
+            <div class="flex-1 p-6 text-center flex flex-col justify-center" style="background: oklch(0.60 0.120 55);">
+              <p class="font-display font-bold mb-1" style="font-size: 2.8rem; color: oklch(0.985 0.008 85);">12 wk</p>
+              <p class="font-body leading-snug" style="font-size: 0.8rem; color: oklch(0.985 0.008 85 / 0.80);">to first full harvest, on average</p>
             </div>
-            <div class="col-span-2 text-center bg-brand-100 rounded-2xl p-6">
-              <p class="font-display text-4xl font-bold text-brand-500 mb-1">4,200+</p>
-              <p class="text-xs text-surface-800/70 font-body leading-snug">families have started their journey with Hearthstead</p>
+            <div class="flex-1 p-6 text-center flex flex-col justify-center">
+              <p class="font-display font-bold mb-1" style="font-size: 2.8rem; color: oklch(0.36 0.080 140);">4,200+</p>
+              <p class="font-body leading-snug" style="font-size: 0.8rem; color: oklch(0.42 0.026 76);">families growing with Hearthstead today</p>
             </div>
           </div>
         </div>
@@ -375,67 +444,103 @@ import Base from '../layouts/Base.astro';
   </section>
 
   <!-- ============================================================
-       WAVE DIVIDER → CTA
+       ORGANIC WAVE DIVIDER 4 — into CTA
        ============================================================ -->
-  <div class="overflow-hidden leading-[0] bg-surface-50" aria-hidden="true">
-    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:80px; display:block;">
-      <path d="M0,40 C360,0 720,80 1080,30 C1260,10 1380,60 1440,40 L1440,0 L0,0 Z" fill="oklch(0.91 0.020 82)"/>
+  <div class="overflow-hidden leading-[0]" style="background: oklch(0.985 0.008 85);" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:90px; display:block;">
+      <path d="M0,50 C250,10 500,75 750,35 C950,5 1150,60 1350,30 C1410,18 1435,38 1440,45 L1440,0 L0,0 Z" fill="oklch(0.96 0.015 85)"/>
     </svg>
   </div>
 
   <!-- ============================================================
-       FINAL CTA — Invitation, not a sales pitch
+       FINAL CTA — Warm invitation, not a sales pitch
+       Email capture, golden-hour farmhouse light
        ============================================================ -->
-  <section id="cta" class="relative bg-surface-50 py-24 md:py-36 overflow-hidden noise-overlay">
-    <!-- Background gradient orbs -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20 animate-pulse-soft" style="background: radial-gradient(circle, oklch(0.36 0.080 140), transparent 70%);"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full opacity-15 animate-pulse-soft" style="background: radial-gradient(circle, oklch(0.60 0.120 55), transparent 70%); animation-delay: 3s;"></div>
-    </div>
+  <section id="cta" class="relative section-py overflow-hidden cta-bg noise-overlay">
+
+    <!-- Warm amber drift orb -->
+    <div
+      class="absolute top-[-15%] right-[-10%] w-[600px] h-[600px] rounded-full pointer-events-none animate-pulse-soft"
+      style="background: radial-gradient(circle at 45% 45%, oklch(0.60 0.110 58 / 0.18) 0%, transparent 60%); filter: blur(60px);"
+      aria-hidden="true"
+    ></div>
+    <!-- Green depth orb -->
+    <div
+      class="absolute bottom-[-20%] left-[-8%] w-[500px] h-[500px] rounded-full pointer-events-none animate-drift"
+      style="background: radial-gradient(circle at 55% 55%, oklch(0.36 0.065 140 / 0.15) 0%, transparent 60%); filter: blur(55px);"
+      aria-hidden="true"
+    ></div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-accent-500 mb-5 font-body animate-fade-in">Your Next Step</p>
 
-      <h2 class="font-display font-semibold text-surface-900 leading-tight mb-6 animate-slide-up" style="font-size: clamp(2.4rem, 6vw, 5rem);">
-        Your family's homestead journey<br>
-        <em class="italic font-normal text-brand-500">starts with one seed.</em>
+      <!-- Botanical eyebrow divider -->
+      <div class="flex items-center justify-center gap-4 mb-6 animate-fade-in">
+        <span class="block w-10 h-px" style="background: oklch(0.60 0.120 55 / 0.5);"></span>
+        <!-- Leaf SVG accent -->
+        <svg class="w-5 h-5" style="color: oklch(0.60 0.120 55);" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10 2C10 2 3 6 3 12a7 7 0 0014 0C17 6 10 2 10 2z" fill-opacity="0.85"/>
+        </svg>
+        <span class="block w-10 h-px" style="background: oklch(0.60 0.120 55 / 0.5);"></span>
+      </div>
+
+      <p class="text-xs font-semibold uppercase tracking-[0.22em] font-body mb-5 animate-fade-in" style="color: oklch(0.60 0.120 55);">
+        Your Next Step
+      </p>
+
+      <h2 class="font-display font-semibold text-surface-900 leading-tight mb-6 animate-slide-up" style="font-size: clamp(2.6rem, 7vw, 5.5rem);">
+        Your family's homestead<br>
+        <em class="font-normal italic" style="color: oklch(0.36 0.080 140);">starts with one seed.</em>
       </h2>
 
-      <p class="text-xl text-surface-800/70 font-body leading-relaxed max-w-2xl mx-auto mb-10 animate-slide-up delay-100">
-        Join 4,200+ families already growing food, building skills, and raising capable kids — right from their backyards. Get our free Family Garden Starter Guide the moment you sign up.
+      <p class="font-body leading-relaxed max-w-2xl mx-auto mb-10 animate-slide-up delay-100" style="font-size: 1.2rem; color: oklch(0.36 0.028 76);">
+        Join 4,200+ families already growing food, building skills, and raising capable kids — right from their backyards. Get our free <strong style="font-weight: 600; color: oklch(0.28 0.030 75);">Family Garden Starter Guide</strong> the moment you sign up.
       </p>
 
       <!-- Email capture form -->
-      <form class="animate-slide-up delay-200 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-5" onsubmit="return false;">
+      <form
+        class="animate-slide-up delay-200 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-5"
+        onsubmit="return false;"
+      >
         <label for="email-cta" class="sr-only">Your email address</label>
         <input
           id="email-cta"
           type="email"
           placeholder="Your family's email address"
-          class="flex-1 px-5 py-4 rounded-full border border-surface-300 bg-surface-50 text-surface-900 font-body text-base placeholder:text-surface-400/70 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
           required
+          class="flex-1 px-5 py-4 rounded-full border font-body text-base focus:outline-none focus:ring-2"
+          style="border-color: oklch(0.70 0.020 78); background: oklch(0.985 0.008 85); color: oklch(0.28 0.030 75); focus:ring-color: oklch(0.36 0.080 140);"
         />
         <button
           type="submit"
-          class="px-7 py-4 bg-brand-500 text-surface-50 font-semibold rounded-full hover:bg-brand-600 transition-colors duration-200 font-body text-base whitespace-nowrap"
+          class="px-7 py-4 font-semibold rounded-full font-body text-base whitespace-nowrap transition-colors duration-200"
+          style="background: oklch(0.36 0.080 140); color: oklch(0.985 0.008 85);"
+          onmouseover="this.style.backgroundColor='oklch(0.28 0.068 140)'"
+          onmouseout="this.style.backgroundColor='oklch(0.36 0.080 140)'"
         >
           Join Our Community
         </button>
       </form>
 
-      <p class="text-sm text-surface-800/50 font-body animate-fade-in delay-300">
+      <p class="text-sm font-body animate-fade-in delay-300" style="color: oklch(0.50 0.022 76);">
         Free to join. No spam — just seasonal guides, skill tutorials, and a warm community of families like yours.
       </p>
 
-      <!-- Secondary link -->
+      <!-- Secondary link — browse the journal -->
       <div class="mt-10 animate-fade-in delay-400">
-        <a href="/blog" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors font-body">
+        <a
+          href="/blog"
+          class="inline-flex items-center gap-2 text-sm font-semibold font-body transition-colors duration-150"
+          style="color: oklch(0.36 0.080 140);"
+          onmouseover="this.style.color='oklch(0.28 0.068 140)'"
+          onmouseout="this.style.color='oklch(0.36 0.080 140)'"
+        >
           Browse the Hearthstead Journal first
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
         </a>
       </div>
+
     </div>
   </section>
 

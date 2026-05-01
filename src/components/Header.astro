@@ -1,29 +1,47 @@
 ---
 ---
-<header class="sticky top-0 z-50 border-b border-surface-200/60 bg-surface-50/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b" style="border-color: oklch(0.84 0.022 80 / 0.55); background: oklch(0.985 0.008 85 / 0.92); backdrop-filter: blur(16px) saturate(1.15);">
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
     <!-- Logo / Wordmark -->
-    <a href="/" class="flex items-center gap-2.5 group">
-      <!-- Leaf icon -->
-      <svg class="w-7 h-7 text-brand-500 flex-shrink-0" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M5 23C5 23 7 14 14 9C21 4 24 5 24 5C24 5 23 10 18 15C13 20 5 23 5 23Z" fill="currentColor" fill-opacity="0.85"/>
-        <path d="M5 23C8 20 11 17 13 14" stroke="oklch(0.96 0.015 85)" stroke-width="1.2" stroke-linecap="round"/>
+    <a href="/" class="flex items-center gap-2.5 group" aria-label="Hearthstead — Home">
+      <!-- Leaf / hearth icon -->
+      <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Leaf shape -->
+        <path d="M5 23C5 23 7 13.5 14.5 8.5C22 3.5 24.5 4.5 24.5 4.5C24.5 4.5 23.5 9.5 18.5 14.5C13.5 19.5 5 23 5 23Z" fill="oklch(0.36 0.080 140)" fill-opacity="0.88"/>
+        <!-- Stem / vein -->
+        <path d="M5 23C8.5 19.5 11.5 16.5 13.5 13.5" stroke="oklch(0.97 0.012 85)" stroke-width="1.25" stroke-linecap="round"/>
+        <!-- Small amber accent dot -->
+        <circle cx="20" cy="8.5" r="2.2" fill="oklch(0.60 0.120 55)" fill-opacity="0.75"/>
       </svg>
-      <span class="font-display text-xl font-semibold tracking-wide text-surface-900">Hearthstead</span>
+      <span class="font-display text-xl font-semibold tracking-wide" style="color: oklch(0.22 0.028 75);">Hearthstead</span>
     </a>
 
-    <!-- Nav links (desktop) -->
+    <!-- Desktop nav links -->
     <div class="hidden md:flex items-center gap-7">
-      <a href="#story" class="text-sm font-medium text-surface-800/70 hover:text-brand-500 transition-colors duration-150">Our Story</a>
-      <a href="#how-it-works" class="text-sm font-medium text-surface-800/70 hover:text-brand-500 transition-colors duration-150">How It Works</a>
-      <a href="#values" class="text-sm font-medium text-surface-800/70 hover:text-brand-500 transition-colors duration-150">Community</a>
-      <a href="#cta" class="text-sm font-semibold bg-brand-500 text-surface-50 px-5 py-2.5 rounded-full hover:bg-brand-600 transition-colors duration-150">
+      <a href="#story"        class="text-sm font-medium font-body transition-colors duration-150" style="color: oklch(0.42 0.026 76);" onmouseover="this.style.color='oklch(0.36 0.080 140)'" onmouseout="this.style.color='oklch(0.42 0.026 76)'">Our Story</a>
+      <a href="#how-it-works" class="text-sm font-medium font-body transition-colors duration-150" style="color: oklch(0.42 0.026 76);" onmouseover="this.style.color='oklch(0.36 0.080 140)'" onmouseout="this.style.color='oklch(0.42 0.026 76)'">How It Works</a>
+      <a href="#values"       class="text-sm font-medium font-body transition-colors duration-150" style="color: oklch(0.42 0.026 76);" onmouseover="this.style.color='oklch(0.36 0.080 140)'" onmouseout="this.style.color='oklch(0.42 0.026 76)'">Community</a>
+      <a href="/blog"         class="text-sm font-medium font-body transition-colors duration-150" style="color: oklch(0.42 0.026 76);" onmouseover="this.style.color='oklch(0.36 0.080 140)'" onmouseout="this.style.color='oklch(0.42 0.026 76)'">Journal</a>
+
+      <!-- CTA pill -->
+      <a
+        href="#cta"
+        class="text-sm font-semibold font-body px-5 py-2.5 rounded-full transition-colors duration-150"
+        style="background: oklch(0.36 0.080 140); color: oklch(0.97 0.012 85);"
+        onmouseover="this.style.backgroundColor='oklch(0.28 0.068 140)'"
+        onmouseout="this.style.backgroundColor='oklch(0.36 0.080 140)'"
+      >
         Start Your Journey
       </a>
     </div>
 
-    <!-- Mobile menu button (decorative — Polish Phase can add JS) -->
-    <button class="md:hidden p-2 text-surface-800/70 hover:text-surface-900" aria-label="Menu">
+    <!-- Mobile menu button -->
+    <button
+      class="md:hidden p-2 rounded-lg transition-colors duration-150"
+      style="color: oklch(0.42 0.026 76);"
+      aria-label="Open navigation menu"
+    >
       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>

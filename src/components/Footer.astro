@@ -1,54 +1,85 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="bg-brand-500 text-surface-100">
-  <!-- Wave top -->
-  <div class="overflow-hidden leading-[0]">
-    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:60px; margin-bottom:-2px;">
-      <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,0 L0,0 Z" fill="oklch(0.96 0.015 85)"/>
+
+<footer style="background: oklch(0.36 0.080 140); color: oklch(0.93 0.025 140);">
+
+  <!-- Organic wave top — flows from last section into footer -->
+  <div class="overflow-hidden leading-[0]" aria-hidden="true">
+    <svg viewBox="0 0 1440 70" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:70px; margin-bottom:-2px;">
+      <path d="M0,35 C240,65 480,5 720,35 C960,62 1200,8 1440,35 L1440,0 L0,0 Z" fill="oklch(0.985 0.008 85)"/>
     </svg>
   </div>
 
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
-      <!-- Brand -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+
+      <!-- Brand column -->
       <div class="md:col-span-1">
-        <div class="flex items-center gap-2.5 mb-4">
-          <svg class="w-7 h-7 text-accent-200 flex-shrink-0" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M5 23C5 23 7 14 14 9C21 4 24 5 24 5C24 5 23 10 18 15C13 20 5 23 5 23Z" fill="currentColor" fill-opacity="0.9"/>
-            <path d="M5 23C8 20 11 17 13 14" stroke="oklch(0.36 0.080 140)" stroke-width="1.2" stroke-linecap="round"/>
+        <a href="/" class="flex items-center gap-2.5 mb-5" aria-label="Hearthstead — Home">
+          <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M5 23C5 23 7 13.5 14.5 8.5C22 3.5 24.5 4.5 24.5 4.5C24.5 4.5 23.5 9.5 18.5 14.5C13.5 19.5 5 23 5 23Z" fill="oklch(0.84 0.048 140)" fill-opacity="0.90"/>
+            <path d="M5 23C8.5 19.5 11.5 16.5 13.5 13.5" stroke="oklch(0.36 0.080 140)" stroke-width="1.25" stroke-linecap="round"/>
+            <circle cx="20" cy="8.5" r="2.2" fill="oklch(0.60 0.120 55)" fill-opacity="0.80"/>
           </svg>
-          <span class="font-display text-xl font-semibold text-surface-50">Hearthstead</span>
-        </div>
-        <p class="text-sm text-surface-100/70 leading-relaxed max-w-xs font-body">
+          <span class="font-display text-xl font-semibold" style="color: oklch(0.97 0.012 85);">Hearthstead</span>
+        </a>
+        <p class="font-body leading-relaxed max-w-xs" style="font-size: 0.9rem; color: oklch(0.84 0.048 140);">
           Where families put down roots — together. Practical homesteading guides for every season of family life.
+        </p>
+
+        <!-- Tagline as small italic serif stamp -->
+        <p class="font-display italic mt-4" style="font-size: 1.05rem; color: oklch(0.60 0.120 55);">
+          "Growing families, one season at a time."
         </p>
       </div>
 
-      <!-- Links -->
+      <!-- Explore links -->
       <div>
-        <p class="font-display text-sm font-semibold uppercase tracking-widest text-surface-100/50 mb-4">Explore</p>
-        <ul class="space-y-2.5">
-          <li><a href="#story" class="text-sm text-surface-100/80 hover:text-surface-50 transition-colors">Our Story</a></li>
-          <li><a href="#how-it-works" class="text-sm text-surface-100/80 hover:text-surface-50 transition-colors">How It Works</a></li>
-          <li><a href="#values" class="text-sm text-surface-100/80 hover:text-surface-50 transition-colors">Community</a></li>
-          <li><a href="/blog" class="text-sm text-surface-100/80 hover:text-surface-50 transition-colors">Journal</a></li>
+        <p class="font-display text-sm font-semibold uppercase tracking-widest mb-5" style="color: oklch(0.84 0.048 140 / 0.60);">Explore</p>
+        <ul class="space-y-3">
+          <li>
+            <a href="#story" class="font-body text-sm transition-colors duration-150" style="color: oklch(0.84 0.048 140);" onmouseover="this.style.color='oklch(0.97 0.012 85)'" onmouseout="this.style.color='oklch(0.84 0.048 140)'">Our Story</a>
+          </li>
+          <li>
+            <a href="#how-it-works" class="font-body text-sm transition-colors duration-150" style="color: oklch(0.84 0.048 140);" onmouseover="this.style.color='oklch(0.97 0.012 85)'" onmouseout="this.style.color='oklch(0.84 0.048 140)'">How It Works</a>
+          </li>
+          <li>
+            <a href="#values" class="font-body text-sm transition-colors duration-150" style="color: oklch(0.84 0.048 140);" onmouseover="this.style.color='oklch(0.97 0.012 85)'" onmouseout="this.style.color='oklch(0.84 0.048 140)'">Community</a>
+          </li>
+          <li>
+            <a href="/blog" class="font-body text-sm transition-colors duration-150" style="color: oklch(0.84 0.048 140);" onmouseover="this.style.color='oklch(0.97 0.012 85)'" onmouseout="this.style.color='oklch(0.84 0.048 140)'">The Journal</a>
+          </li>
         </ul>
       </div>
 
-      <!-- CTA column -->
+      <!-- Begin Here column -->
       <div>
-        <p class="font-display text-sm font-semibold uppercase tracking-widest text-surface-100/50 mb-4">Begin Here</p>
-        <p class="text-sm text-surface-100/70 leading-relaxed mb-4">Ready to grow your first garden with your kids? Start with our free family guide.</p>
-        <a href="#cta" class="inline-block text-sm font-semibold bg-accent-500 text-surface-50 px-5 py-2.5 rounded-full hover:bg-accent-600 transition-colors">
+        <p class="font-display text-sm font-semibold uppercase tracking-widest mb-5" style="color: oklch(0.84 0.048 140 / 0.60);">Begin Here</p>
+        <p class="font-body leading-relaxed mb-5" style="font-size: 0.9rem; color: oklch(0.84 0.048 140);">
+          Ready to grow your first garden with your kids? Start with our free Family Garden Starter Guide — no experience needed.
+        </p>
+        <a
+          href="#cta"
+          class="inline-block text-sm font-semibold font-body px-5 py-2.5 rounded-full transition-colors duration-200"
+          style="background: oklch(0.60 0.120 55); color: oklch(0.985 0.008 85);"
+          onmouseover="this.style.backgroundColor='oklch(0.50 0.110 52)'"
+          onmouseout="this.style.backgroundColor='oklch(0.60 0.120 55)'"
+        >
           Join the Community
         </a>
       </div>
     </div>
 
-    <div class="border-t border-surface-100/15 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p class="text-xs text-surface-100/50 font-body">&copy; {year} Hearthstead. All rights reserved.</p>
-      <p class="text-xs text-surface-100/40 font-body italic">Growing families, one season at a time.</p>
+    <!-- Bottom bar -->
+    <div class="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-3" style="border-color: oklch(0.97 0.012 85 / 0.12);">
+      <p class="text-xs font-body" style="color: oklch(0.84 0.048 140 / 0.55);">
+        &copy; {year} Hearthstead. All rights reserved.
+      </p>
+      <div class="flex items-center gap-5">
+        <a href="/privacy" class="text-xs font-body transition-colors duration-150" style="color: oklch(0.84 0.048 140 / 0.55);" onmouseover="this.style.color='oklch(0.84 0.048 140)'" onmouseout="this.style.color='oklch(0.84 0.048 140 / 0.55)'">Privacy Policy</a>
+        <a href="/terms"   class="text-xs font-body transition-colors duration-150" style="color: oklch(0.84 0.048 140 / 0.55);" onmouseover="this.style.color='oklch(0.84 0.048 140)'" onmouseout="this.style.color='oklch(0.84 0.048 140 / 0.55)'">Terms of Use</a>
+      </div>
     </div>
   </div>
 </footer>
