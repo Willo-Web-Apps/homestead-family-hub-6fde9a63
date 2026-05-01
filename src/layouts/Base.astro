@@ -8,7 +8,7 @@ interface Props {
   description?: string;
 }
 
-const { title = "Your New Business", description = "Incredible site dedicated to helping families home stead" } = Astro.props;
+const { title = "Hearthstead — Where Families Put Down Roots", description = "Hearthstead guides families through every step of the homesteading journey — from first garden beds to full pantries — together." } = Astro.props;
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -23,9 +23,10 @@ const { title = "Your New Business", description = "Incredible site dedicated to
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Your New Business",
-      "description": "Incredible site dedicated to helping families home stead",
-      "url": "https://homestead-family-hub.onrender.com"
+      "name": "Hearthstead",
+      "description": "Hearthstead guides families through every step of the homesteading journey — from first garden beds to full pantries — together.",
+      "url": "https://homestead-family-hub.onrender.com",
+      "slogan": "Where Families Put Down Roots"
     }
     </script>
   </head>

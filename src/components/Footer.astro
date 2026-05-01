@@ -1,11 +1,54 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-surface-200 py-10 mt-auto">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm font-semibold text-surface-900 font-display">Your New Business</p>
-      <p class="text-sm text-surface-800/50">&copy; {year} Your New Business. All rights reserved.</p>
+<footer class="bg-brand-500 text-surface-100">
+  <!-- Wave top -->
+  <div class="overflow-hidden leading-[0]">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height:60px; margin-bottom:-2px;">
+      <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,0 L0,0 Z" fill="oklch(0.96 0.015 85)"/>
+    </svg>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <!-- Brand -->
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-2.5 mb-4">
+          <svg class="w-7 h-7 text-accent-200 flex-shrink-0" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M5 23C5 23 7 14 14 9C21 4 24 5 24 5C24 5 23 10 18 15C13 20 5 23 5 23Z" fill="currentColor" fill-opacity="0.9"/>
+            <path d="M5 23C8 20 11 17 13 14" stroke="oklch(0.36 0.080 140)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-xl font-semibold text-surface-50">Hearthstead</span>
+        </div>
+        <p class="text-sm text-surface-100/70 leading-relaxed max-w-xs font-body">
+          Where families put down roots — together. Practical homesteading guides for every season of family life.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <p class="font-display text-sm font-semibold uppercase tracking-widest text-surface-100/50 mb-4">Explore</p>
+        <ul class="space-y-2.5">
+          <li><a href="#story" class="text-sm text-surface-100/80 hover:text-surface-50 transition-colors">Our Story</a></li>
+          <li><a href="#how-it-works" class="text-sm text-surface-100/80 hover:text-surface-50 transition-colors">How It Works</a></li>
+          <li><a href="#values" class="text-sm text-surface-100/80 hover:text-surface-50 transition-colors">Community</a></li>
+          <li><a href="/blog" class="text-sm text-surface-100/80 hover:text-surface-50 transition-colors">Journal</a></li>
+        </ul>
+      </div>
+
+      <!-- CTA column -->
+      <div>
+        <p class="font-display text-sm font-semibold uppercase tracking-widest text-surface-100/50 mb-4">Begin Here</p>
+        <p class="text-sm text-surface-100/70 leading-relaxed mb-4">Ready to grow your first garden with your kids? Start with our free family guide.</p>
+        <a href="#cta" class="inline-block text-sm font-semibold bg-accent-500 text-surface-50 px-5 py-2.5 rounded-full hover:bg-accent-600 transition-colors">
+          Join the Community
+        </a>
+      </div>
+    </div>
+
+    <div class="border-t border-surface-100/15 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-xs text-surface-100/50 font-body">&copy; {year} Hearthstead. All rights reserved.</p>
+      <p class="text-xs text-surface-100/40 font-body italic">Growing families, one season at a time.</p>
     </div>
   </div>
 </footer>
